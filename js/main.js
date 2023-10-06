@@ -1,4 +1,3 @@
-let queue = [];
 let frames = [];
 let current_message = "";
 
@@ -40,9 +39,10 @@ function cowsay_gen_frames(message) {
     return new_frames;
 }
 
-function add_animation(message) {
-    if (current_message == message) return;
-    queue.push(message);
+function add_animation(msg) {
+    current_message = msg;
+    let new_frames = cowsay_gen_frames(msg);
+    frames = new_frames;
 }
 
 function animation_handler() {
@@ -50,13 +50,6 @@ function animation_handler() {
     let elem = document.getElementById("cowsay");
 
     setInterval(() => {
-        let msg = queue.shift();
-        if (msg != undefined) {
-            current_message = msg;
-            let new_frames = cowsay_gen_frames(msg);
-            frames = new_frames;
-        }
-
         let frame = frames.shift();
         if (frame == undefined) return;
         elem.innerText = frame;
