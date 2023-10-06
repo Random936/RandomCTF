@@ -32,11 +32,11 @@ canvas {
 
 #rows {
     width: auto;
+    box-shadow: 0 0 50px black;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 pre {
     font: 15px;
     color: #00ff00;
-    box-shadow: 0 0 50px black;
-    background: rgba(0, 0, 0, 0.5);
 }
