@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>RandomCTF</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <div id="content" onmouseover="add_animation('Welcome to RandomCTF!')">
+            <div id="rows">
+                <pre id="cowsay">
+                </pre>
+                <div id="media-links">
+                    <a href="https://www.linkedin.com/in/jaden-provost-maxwell-comfort-09a54718a/">
+                        <i class="fa fa-brands fa-linkedin" onmouseover="add_animation('Linkedin')"></i>
+                    </a>
+                    <a href="https://github.com/Random936">
+                        <i class="fa fa-brands fa-github" onmouseover="add_animation('Github')"></i>
+                    </a>
+                    <a href="mailto:inbox@randomctf.com">
+                        <i class="fa fa-solid fa-envelope" onmouseover="add_animation('Email')"></i>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                        <i class="fa fa-solid fa-question" onmouseover="add_animation('Mystery Link :D')"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script>
+         add_animation("Welcome to RandomCTF!");
+         animation_handler();
+        </script>
+    </body>
+</html>
