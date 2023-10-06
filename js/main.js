@@ -32,7 +32,11 @@ const RANDOM_MESSAGES = [
     ":wq",
     ":(){ :|: & };:",
     "' OR 1=1-- -",
-    "<script>alert(1)</script>"
+    "<script>alert(1)</script>",
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "Have you heard of revshells.com?",
+    "YmFzZTY0IGVuY29kaW5nIGlzIGZ1biA6KQ==",
+    "This program cannot be run in DOS mode"
 ];
 
 // Code source: https://dev.to/gnsp/making-the-matrix-effect-in-javascript-din
